@@ -1,0 +1,21 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+*.egg-info/
+.DS_Store
+node_modules/
+dist/
+build/
+
+# OpenTofu / Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+terraform.tfvars
+crash.log
+
+# Sample/raw log data — cold storage lives in Nextcloud per docs/architecture.md, not in git
+log_samples/
+

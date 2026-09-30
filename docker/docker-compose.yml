@@ -1,0 +1,12 @@
+# Services that run on the DockerHome VM: MCP servers and (later) agents.
+# Wazuh itself (manager, indexer, dashboard) runs on its own dedicated VM and is NOT part of
+# this compose file — see docs/architecture.md.
+services:
+  wazuh-mcp:
+    build:
+      context: ../mcp-servers/wazuh-mcp
+    env_file:
+      - ../mcp-servers/wazuh-mcp/.env
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
